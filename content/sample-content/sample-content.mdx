@@ -1,0 +1,31 @@
+'''
+title: 'Python Decorators'
+date: '2023-09-24'
+tags: ['next.js','python']
+'''
+
+# Introduction to Python Decorators
+
+In this tutorial, we will explore the concept of decorators in Python and how they can be used to modify the behavior of functions or classes. Decorators are a powerful feature in Python that allow you to wrap or modify the functionality of existing code without making any changes to the original code itself.
+
+## What are Decorators?
+
+Decorators are functions that take another function as input and extend the behavior of the input function without explicitly modifying it. They provide a way to modify or enhance the functionality of functions or classes by wrapping them inside another function. Decorators are especially useful when you want to add additional functionality to existing code without modifying the original code.
+
+## How to Define a Decorator?
+
+To define a decorator, you need to create a function that takes a function as an argument and returns a new function. The new function can add additional functionality before or after calling the original function. Here's an example of a simple decorator that measures the execution time of a function:
+
+```python
+import time
+
+def measure_time(func):
+    def wrapper(*args, **kwargs):
+        start_time = time.time()
+        result = func(*args, **kwargs)
+        end_time = time.time()
+        execution_time = end_time - start_time
+        print(f"Execution time: {execution_time} seconds")
+        return result
+    return wrapper
+```
