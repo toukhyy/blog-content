@@ -20,7 +20,7 @@ The process of comparing the previous and current Virtual DOM trees is known as 
 
 React follows a hierarchical component-based architecture, where UI elements are encapsulated into reusable components. When a component updates, React re-renders the component and its child components. However, React optimizes the rendering process by performing a shallow comparison of props and state to determine if a component actually needs to be re-rendered. This optimization helps minimize unnecessary re-renders and improves performance.
 
-```jsx
+```ts {3} /render/
 class MyComponent extends React.Component {
   render() {
     return <div>{this.props.message}</div>;
