@@ -1,5 +1,5 @@
 ---
-title: 'Understanding The JSX'
+title: 'React: Understanding The JSX.'
 date: '2023-12-28'
 tags: ['programming', 'javaScript', 'reactJS', 'nextJS']
 banner: 'https://res.cloudinary.com/doaw1mqkw/image/upload/v1698612577/toukhy/christian-holzinger-CUY_YHhCFl4-unsplash-compresses_xk8iun.jpg'
@@ -22,15 +22,19 @@ Let's outline the steps involved when React runs JSX:
 
 ```jsx title="ComponentOne.js"
 const Greeting = () => {
-  return return <h1>Hello!</h1>;
+  return return <h1>Hello</h1>;
 };
 ```
 
-is the same as
+### Is the same as
 
 ```jsx title="ComponentOne.js"
 function Greeting({ name }) {
-  return React.createElement('h1', { className: 'greeting' }, 'Hello');
+  return createElement(
+    'h1',
+    { className: 'greeting' },
+    'Hello'
+  );
 }
 ```
 
